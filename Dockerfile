@@ -1,8 +1,7 @@
 FROM ubuntu:16.04
 MAINTAINER Przemek Szalko <przemek@mobtitude.com>
 
-ENV DEBIAN_FRONTEND noninteractive
-RUN yum update && yum install -y pptpd iptables
+RUN yum update && yum install -y pptpd ppp iptables
 
 COPY ./etc/pptpd.conf /etc/pptpd.conf
 COPY ./etc/ppp/pptpd-options /etc/ppp/pptpd-options
